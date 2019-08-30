@@ -1,0 +1,40 @@
+@import '../../../variables';
+
+.tab-content {
+  padding-top: 1.5em;
+}
+
+.mat-form-field {
+  width: 100%;
+
+  @include bp(md) {
+    width: 60%;
+  }
+}
+
+.mat-tab-nav-bar {
+  overflow-x: scroll;
+
+  @include bp(md) {
+    overflow-x: hidden;
+  }
+}
+
+.slider {
+  width: 100%;
+
+  @include bp(md) {
+    width: 60%;
+  }
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h1 {
+    margin: 0;
+  }
+}

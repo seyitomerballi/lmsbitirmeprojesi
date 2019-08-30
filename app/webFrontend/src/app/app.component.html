@@ -1,0 +1,80 @@
+<app-cookie-banner></app-cookie-banner>
+<div class="{{ 'app-wrapper ' + specialContainerStyle() }}">
+  <mat-toolbar color="accent" [ngClass]="{'warning': hasWarning()}">
+    <mat-toolbar-row>
+      <a routerLink="/" class="logo">{{ 'common.SAULMS' | translate }}</a>
+
+      <span class="non-production-warning">
+        <a *ngIf="hasWarning()" title="{{apiInfo.nonProductionWarning}}">{{apiInfo.nonProductionWarning}}</a>
+      </span>
+
+      <span *ngIf="!isLoggedIn()">
+        <button class="login" mat-button routerLink="/login" routerLinkActive="active">{{ 'common.login' | translate }}</button>
+        <button class="register" mat-button *ngIf="!isLoggedIn()" routerLink="/register"
+                routerLinkActive="active">{{ 'common.register' | translate }}</button>
+        <span class="between-distance" *ngIf="!isLoggedIn()"></span>
+      </span>
+
+      <span *ngIf="isLoggedIn()">
+        <button mat-button routerLink="/profile">
+          <img *ngIf="this.avatarBackgroundImage === undefined; else elseBlock"
+               class="avatar" src="{{this.userService.user.getGravatarURL(30)}}" width="30" height="30">
+          <ng-template #elseBlock>
+            <div class="user-icon" [style.backgroundImage]="this.avatarBackgroundImage"></div>
+          </ng-template>
+          <span class="firstname-wrapper">{{ this.userService.user.profile.firstName }}</span>
+        </button>
+        <app-notification *ngIf="isStudent()" class="app-notification"></app-notification>
+      </span>
+
+      <button mat-icon-button [matMenuTriggerFor]="langMenu">
+        <mat-icon>language</mat-icon>
+        <span>{{translate.currentLang | uppercase}}</span>
+      </button>
+      <mat-menu #langMenu="matMenu">
+        <button mat-menu-item (click)="changeLanguage('tr')">
+          Türkçe
+        </button>
+        <button mat-menu-item (click)="changeLanguage('en')">
+          English
+        </button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngIf="isLoggedIn() && isAdmin()" routerLink="/admin" routerLinkActive="active">
+          <mat-icon>settings</mat-icon>
+          <span>{{ 'mainMenu.admin' | translate }}</span>
+        </button>
+        <button mat-menu-item *ngIf="isLoggedIn() && isStudent()" routerLink="/userSettings" routerLinkActive="active">
+          <mat-icon>settings</mat-icon>
+          <span>{{ 'mainMenu.userSettings' | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/about" routerLinkActive="active">
+          <mat-icon>info</mat-icon>
+          <span>{{ 'mainMenu.about' | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/legalnotice" routerLinkActive="active">
+          <mat-icon>info</mat-icon>
+          <span>{{ 'mainMenu.legalnotice' | translate }}</span>
+        </button>
+        <button mat-menu-item routerLink="/privacy" routerLinkActive="active">
+          <mat-icon>info</mat-icon>
+          <span>{{ 'mainMenu.privacy' | translate }}</span>
+        </button>
+        <button mat-menu-item *ngIf="isLoggedIn()" (click)="logout()" routerLink="" routerLinkActive="active">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>{{ 'mainMenu.logout' | translate }}</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-progress-bar *ngIf="showProgressBar" [mode]="indeterminate"></mat-progress-bar>
+
+  <div class="{{ contentStyle() }}">
+    <router-outlet></router-outlet>
+  </div>
+</div>

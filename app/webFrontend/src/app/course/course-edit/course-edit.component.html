@@ -1,0 +1,23 @@
+<div class="course-header">
+  <h1>{{ 'course.text.editCourse' | translate }}</h1>
+  <a mat-button [routerLink]="['/course', id]" target="_blank" class="md-raised md-primary course-link">
+    <mat-icon>open_in_new</mat-icon>
+    {{ 'course.text.goToCourse' | translate }}
+  </a>
+
+</div>
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let tab of tabs"
+     [routerLink]="tab.path"
+     routerLinkActive
+     #rla="routerLinkActive"
+     [routerLinkActiveOptions]="{exact: true}"
+     [active]="rla.isActive">
+    {{tab.label}}
+  </a>
+</nav>
+
+<div class="tab-content">
+  <router-outlet></router-outlet>
+</div>

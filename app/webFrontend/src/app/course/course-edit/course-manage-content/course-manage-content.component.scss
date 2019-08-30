@@ -1,0 +1,14 @@
+@import '../../../../variables';
+
+.container {
+  min-height: 500px;
+}
+
+.fab {
+  @include globalFabBtn;
+}
+
+.mat-fab-menu-spacer {
+  display: block;
+  height: 4rem;
+}

@@ -1,0 +1,100 @@
+.card {
+  height: 248px;
+  width: 248px;
+  float: left;
+  margin: 10px;
+  border-radius: 8px;
+  background: no-repeat 75px 15px;
+  overflow: hidden;
+
+  &.small{
+    height: 180px;
+    width: 180px;
+
+    .card-btn-wrapper {
+      .mat-raised-button {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: map-get($app-primary, 300);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .card-btn-wrapper {
+    .mat-raised-button {
+      width: 184px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .opacity {
+    background-color: #000;
+    opacity: .33;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 8px;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin-bottom: 0;
+    font-size: .9em;
+  }
+
+  .text-fit {
+    min-width: 1em;
+    width: auto;
+  }
+
+  .icon-wrapper {
+    $icon-wrapper-size: 140px;
+    $icon-wrapper-size-small:100px;
+
+    left: 45px;
+    width: $icon-wrapper-size;
+    height: $icon-wrapper-size;
+    position: absolute;
+    background: center;
+    border-radius: 50%;
+    user-select: none;
+
+    .mat-icon {
+      height: 100%;
+      width: 100%;
+      font-size: $icon-wrapper-size - 20px;
+      line-height: $icon-wrapper-size - 20px;
+      text-align: center;
+    }
+
+    &.small{
+      left: 40px;
+      width: $icon-wrapper-size-small;
+      height: $icon-wrapper-size-small;
+      .mat-icon {
+        font-size: $icon-wrapper-size-small - 20px;
+        line-height: $icon-wrapper-size-small - 20px;
+      }
+    }
+
+  }
+}
+
+.card_active {
+  @extend .card;
+  background-color: map-get($app-primary, 500);
+}
+

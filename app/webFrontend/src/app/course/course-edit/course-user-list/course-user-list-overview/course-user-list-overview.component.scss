@@ -1,0 +1,30 @@
+@import '../../../../../variables';
+@import '../../../../../styles/card';
+
+.user-drag-handle, .member-drag-handle {
+  cursor: move;
+  opacity: 0.2;
+  user-select: none;
+  margin-right: 0.5em;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  background: center;
+  background-size: cover;
+  //position: absolute;
+  //border-radius: 80px;
+}
+
+.userId {
+  opacity: 0.5;
+}
+
+.centered {
+  margin-top: 30%;
+}

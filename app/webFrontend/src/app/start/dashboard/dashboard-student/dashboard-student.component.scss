@@ -1,0 +1,33 @@
+.courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.search-input-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .search-bar {
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+    .input-bar {
+      border: none;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 475px){
+  .pull-right{
+    float: none;
+    margin-right: 10px;
+  }
+}
+
+

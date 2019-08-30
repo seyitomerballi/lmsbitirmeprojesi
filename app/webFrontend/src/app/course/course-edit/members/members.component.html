@@ -1,0 +1,18 @@
+<app-course-user-list *ngIf="course && foundStudents"
+                      [course]="course"
+                      [users]="course.students"
+                      [dragableUsersInCourse]="course.students"
+                      [dragableUsers]="foundStudents"
+                      [role]="'student'"
+                      [dragulaBagId]="'students'"
+                      (onSearch)="onSearch($event)"
+                      (onDragendRemove)="removeUserFromCoure($event)"
+                      (onDragendPush)="pushUserToCourse($event)"
+                      (onUpdate)="updateUser($event)"></app-course-user-list>
+<app-whitelist-edit *ngIf="course"
+    [total]="totalWhitelist"
+    [course]="course"
+    (onDragendRemoveWhitelist) ="removeWhitelistUserFromCourse($event)"
+    (onDragendPushWhitelist)= "pushWhitelistUserToCourse($event)"
+    (onDragableWhitelistUserInCourse)="onFoundWhitelistUserInCourse($event)">
+</app-whitelist-edit>

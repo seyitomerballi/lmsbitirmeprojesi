@@ -1,0 +1,21 @@
+@import "../../../../variables";
+@import "../../../../styles/file-list";
+.tab-content {
+  margin-top: 1rem;
+
+  video {
+    display: block;
+  }
+
+  .upload-button-group {
+    margin-top: 1rem
+  }
+}
+
+.btn-cancel-upload{
+  margin-top: 1em;
+}
+
+.preview img, .camera video {
+  width: 320px;
+}

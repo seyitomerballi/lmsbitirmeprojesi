@@ -1,0 +1,9 @@
+@import '../../../variables';
+
+video {
+  max-width: 100%;
+
+  @include bp(md) {
+    width: $bp-width--lg;
+  }
+}

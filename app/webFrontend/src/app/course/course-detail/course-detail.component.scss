@@ -1,0 +1,107 @@
+@import '../../../variables';
+
+.download-button {
+  float: right;
+}
+
+.report-button {
+  float: right;
+  clear: both;
+}
+
+.course-header {
+  display: block;
+}
+
+
+.mat-chip-list {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.mat-tab-nav-bar {
+  overflow-x: scroll;
+
+  .mat-tab-link {
+    min-width: 110px;
+  }
+
+  @include bp(md) {
+    overflow-x: hidden;
+  }
+}
+
+.mat-chip {
+  position: relative;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.img-wrapper {
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+
+}
+
+.teacher-name {
+  margin-left: 35px;
+  text-align: center;
+}
+
+.teacher-image {
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.admin-name {
+  margin-left: 35px;
+  text-align: center;
+}
+
+.admin-image {
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.iconPos {
+  margin-right: 0.2em;
+}
+
+.header-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .headings {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    span {
+      height: 48px;
+      box-sizing: border-box;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      vertical-align: top;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    span+span:before {
+      content: ">";
+      padding: 0 0.5rem;
+    }
+  }
+
+}

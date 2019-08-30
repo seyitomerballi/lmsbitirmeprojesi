@@ -1,0 +1,57 @@
+<mat-form-field class="search">
+  <input matInput [placeholder]="'course.placeholder.searchAndAdd' | translate"
+         [matAutocomplete]="auto" [formControl]="userCtrl" (ngModelOptions)="{debounce : 1000}"
+         (ngModelChange)="searchForUsers($event)" [(ngModel)]="search">
+</mat-form-field>
+
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let state of filteredStates | async" [value]="state">
+    {{ state }}
+  </mat-option>
+</mat-autocomplete>
+
+
+<app-course-user-list-overview
+  [course]="course"
+  [role]="role"
+  [usersInCourse]="users"
+  [show]="search.length <= 0 && finishRestCall"
+  (onRemove)="updateUser($event)">
+</app-course-user-list-overview>
+
+<div class="users" *ngIf="search.length > 0 && finishRestCall">
+  <mat-expansion-panel class="panel" [expanded]="true" #expPanel2>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        {{ 'course.text.inCourse' | translate }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <p class="line">{{role}}s: {{dragableUsersInCourse.length}} of
+          <ng-container *ngIf="role === 'student'">{{course.students.length}}</ng-container>
+          <ng-container *ngIf="role === 'teacher'">{{course.teachers.length}}</ng-container>
+        </p>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-course-user-list-show
+      [show]="expPanel2.expanded"
+      [dragulaBagId]="dragulaBagId"
+      [dragUsers]="dragableUsersInCourse"
+      [fieldId]="'UserInCourse'"></app-course-user-list-show>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel class="panel" [expanded]="false" #expPanel1>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="title">
+        {{ 'course.text.notInCourse' | translate }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <p class="line">{{role}}s: {{dragableUsers.length}} of {{usersTotal}}</p>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-course-user-list-show
+      [show]="expPanel1.expanded"
+      [dragulaBagId]="dragulaBagId"
+      [dragUsers]="dragableUsers"
+      [fieldId]="'UserNotInCourse'"></app-course-user-list-show>
+  </mat-expansion-panel>
+</div>

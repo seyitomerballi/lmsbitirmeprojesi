@@ -1,0 +1,72 @@
+<mat-card *ngIf="course" class="course-card">
+  <mat-card-header>
+    <mat-card-title>
+
+      <ng-container *ngIf="course.userCanViewCourse; else courseName">
+        <a [routerLink]="['course', course._id]">
+          <ng-container *ngTemplateOutlet="courseName"></ng-container>
+        </a>
+      </ng-container>
+
+      <ng-template #courseName><h2 title="{{course.name}}">{{course.name}}</h2></ng-template>
+
+    </mat-card-title>
+  </mat-card-header>
+
+  <ng-container *ngIf="course.userCanViewCourse; else courseImage">
+    <a [routerLink]="['course', course._id]">
+      <ng-container *ngTemplateOutlet="courseImage"></ng-container>
+    </a>
+  </ng-container>
+
+  <ng-template #courseImage>
+    <img *ngIf="!this.responsiveImageData" mat-card-image src="/assets/course-header-image.jpg">
+    <app-responsive-image *ngIf="this.responsiveImageData" [classes]="'mat-card-image'"
+                          [responsiveImageData]="this.responsiveImageData"></app-responsive-image>
+  </ng-template>
+
+
+  <mat-card-content>
+    <p>
+      {{course.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <span class="course-admin-actions" *ngIf="this.course.userCanEditCourse">
+      <button mat-icon-button (click)="editCourse(course._id)" [matTooltip]="'course.text.editCourse' | translate">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+
+      <button mat-icon-button (click)="showReport(course._id)" [matTooltip]="'common.statistics' | translate">
+        <mat-icon>show_chart</mat-icon>
+      </button>
+
+      <button mat-icon-button *ngIf="!course.active" disabled>
+        <mat-icon color="warn" [matTooltip]="'course.text.notVisibleToStudents' | translate">visibility_off</mat-icon>
+      </button>
+    </span>
+    <span class="course-student-actions" *ngIf="this.userService.isStudent()">
+      <div style="float:left">
+        <i class="material-icons" style="margin-top: 8px;"
+           [matTooltip]="'course.tooltip.keyRequired' | translate"
+           *ngIf="course.enrollType === 'accesskey'">lock</i>
+        <i class="material-icons" style="margin-top: 8px;"
+           [matTooltip]="'course.tooltip.noKeyRequired' | translate"
+           *ngIf="course.enrollType !== 'accesskey'">lock_open</i>
+      </div>
+      <button mat-icon-button *ngIf="!course.userIsCourseMember"
+              (click)="enroll()" [matTooltip]="'course.tooltip.enroll' | translate">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button *ngIf="course.userIsCourseMember"
+            (click)="leave()" [matTooltip]="'course.tooltip.leave' | translate">
+      <mat-icon>remove_circle_outline</mat-icon>
+    </button>
+    </span>
+    <button mat-icon-button *ngIf="course.userCanViewCourse"
+            class="details-button" [routerLink]="['course', course._id]">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+
+  </mat-card-actions>
+</mat-card>

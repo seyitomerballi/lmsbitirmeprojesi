@@ -1,0 +1,81 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+node_modules/
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Vagrant
+/.vagrant
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+*.js
+nohup.out
+# Do not ignore js files under sub-project-root (gulpfile.js, karma.conf.js, protractor.conf.js, ...)
+!/api/*.js
+!/app/webFrontend/*.js
+!/.travis/*.js
+!/api/test/mocha.env.js
+
+# Ignore CSV-Files generated from nlf
+/**/nlf-license*.csv
+/**/nlf-licenses*.json
+
+# API
+/api/uploads/*
+!/api/uploads/.gitkeep
+!/api/uploads/users
+/api/uploads/users/*
+!/api/uploads/users/.gitkeep
+!/api/uploads/courses
+/api/uploads/courses/*
+!/api/uploads/courses/.gitkeep
+/api/temp/*
+/api/build
+/api/coverage
+/api/docs
+/api/apidocs
+/api/store.json
+docker-compose.override.yml
+
+# Web Frontend
+app/webFrontend/dist
+
+# Never ignore .gitkeep files
+# Note that the ignore has to look like: /some/path/* and not eg. /some/path
+!/**/.gitkeep

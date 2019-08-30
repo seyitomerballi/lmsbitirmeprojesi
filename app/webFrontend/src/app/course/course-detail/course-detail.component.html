@@ -1,0 +1,77 @@
+<app-sticky-toolbar
+  [anchor]="stickyAnchor">
+
+  <div class="header-line">
+    <h2 class="headings">
+      <span>{{course?.name}}</span>
+      <span *ngIf="lectureScrollEmitter|async as lecture">{{lecture?.name}}</span>
+      <span *ngIf="unitScrollEmitter|async as unit">{{unit?.name}}</span>
+    </h2>
+    <ng-template [ngTemplateOutlet]="headerAdminButtons"></ng-template>
+  </div>
+</app-sticky-toolbar>
+<div class="course-header">
+  <ng-template #headerAdminButtons>
+      <span class="course-admin-actions" *ngIf="course.userCanEditCourse">
+      <button mat-icon-button [routerLink]="['/course', course._id, 'edit']"
+              [matTooltip]="'course.text.editCourse' | translate">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+
+      <button mat-icon-button [routerLink]="['/course', course._id, 'report'] "
+              [matTooltip]="'common.statistics' | translate">
+        <mat-icon>show_chart</mat-icon>
+      </button>
+
+      <button mat-icon-button *ngIf="!course.active" disabled>
+        <mat-icon color="warn" [matTooltip]="'course.text.notVisibleToStudents' | translate">visibility_off</mat-icon>
+      </button>
+    </span>
+  </ng-template>
+
+  <div #stickyAnchor>
+    <div class="header-line">
+      <h1>{{course?.name}}</h1>
+      <ng-template [ngTemplateOutlet]="headerAdminButtons"></ng-template>
+    </div>
+  </div>
+
+
+  <mat-chip-list>
+    <mat-chip style="cursor:pointer" (click)="showUserProfile(course?.courseAdmin)">
+      <div class="img-wrapper">
+        <div class="admin-image" [user-image]="course?.courseAdmin"></div>
+      </div>
+      <div class="admin-name">
+        {{course?.courseAdmin.profile.firstName + " " + course?.courseAdmin.profile.lastName}} <br>
+        <i>{{'mainMenu.admin' | translate}}</i>
+      </div>
+    </mat-chip>
+    <div *ngFor="let teacher of course?.teachers">
+      <mat-chip style="cursor:pointer" (click)="showUserProfile(teacher)">
+        <div class="img-wrapper">
+          <div class="teacher-image" [user-image]="teacher"></div>
+        </div>
+        <div class="teacher-name">
+          {{teacher.profile.firstName + " " + teacher.profile.lastName}} <br>
+          <i>{{'common.roles.teacher' | translate}}</i>
+        </div>
+      </mat-chip>
+    </div>
+  </mat-chip-list>
+  <p>{{course?.description}}</p>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let tab of tabs"
+       [routerLink]="tab.path"
+       routerLinkActive
+       #rla="routerLinkActive"
+       [routerLinkActiveOptions]="{exact: true}"
+       [active]="rla.isActive">
+      <mat-icon class="iconPos">{{tab.img}}</mat-icon>
+      {{tab.label}}
+    </a>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
+<app-course-forum [chatRoom]="course?.chatRooms[0]"></app-course-forum>

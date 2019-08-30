@@ -1,0 +1,425 @@
+{
+  "activation": {
+    "text": {
+      "pleaseClick": "Lütfen Tıkla",
+      "toActivate": " hesabınız aktif oldu",
+      "toUseYourAccount": "hesabı kullan"
+    }
+  },
+  "admin": {
+    "cache": {
+      "clear": {
+        "failed": "Server cache temizleme hatası",
+        "label": "Cache temizle",
+        "tooltip": "İndirme isteklerini bozabilir."
+      },
+      "header": "Server Cache kontrolleri"
+    }
+  },
+  "auth": {
+    "login": {
+      "failed": {
+        "couldNotBeVerified": "Giriş Başarısız: Giriş bilgileriniz doğrulanamadı.",
+        "notActiveYet": "Giriş Başarısız: Hesabınız henüz aktif edilmemiştir.",
+        "unknown": "Giriş Başarısız: Bilinmeyen bir hata oluştu."
+      },
+      "success": "Giriş Başarılı"
+    },
+    "changePassword": "Şifreyi değiştir",
+    "confirmPassword": "Şifreyi Onayla",
+    "forgotPassword": "Şifreyi Unuttum",
+    "generatePassword": "Yeni şifre oluştur",
+    "registration": {
+      "acceptCheckboxes": "SAÜ LMS onaylıyorum ",
+      "back": "Anasayfaya dön",
+      "mailSent": "Belirtilen e-posta adresinize aktivasyon kodunu gönderdik.",
+      "privacyDeclaration": "Gizlilik bildirimi",
+      "registerAs": "olarak kayıt ol",
+      "resendActivationButton": "Aktivasyon kodunu tekrar gönder",
+      "successful": "Kayıt işlemi başarıyla tamamlandı",
+      "teacherRegistrationButton": "Öğrenci değil misin?",
+      "termsOfUse": "Kullanım şartları",
+      "tooltipRegister": "Kaydınızı tamamlamak için buraya tıklayınız."
+    },
+    "resendActivation": {
+      "back": "Anasayfaya dön",
+      "mailSent": "Belirlediğiniz e-posta adresinize yeni bir etkinleştirme bağlantısı gönderdik.",
+      "successful": "Tekrar aktivasyon başarılı oldu",
+      "tooltipResendAction": "Yeni aktivasyon bağlantısı talep etmek için buraya tıklayın."
+    },
+    "resetPassword": {
+      "requestReset": "Şifre sıfırlama isteği",
+      "reset": "Sıfırla"
+    },
+    "tooltip": {
+      "currentPassword": "Şimdiki şifre",
+      "ForgotPassword": "Yeni bir şifre istemek için buraya tıklayın.",
+      "ResetPassword": "Şifreyi sıfırlamak için buraya tıklayın."
+    }
+  },
+  "code-kata": {
+    "information": {
+      "info1": "Ayrı tanım, kodlama ve test alanları ile",
+      "info2": "Öğrencileriniz sadece kod alanını düzenleyebilir."
+    },
+    "text": {
+      "codeExample": "Bu sağlanan örnek çözümdür",
+      "codeHere": "Kodunuz buraya gidiyor",
+      "logs": "Logs",
+      "mustSucceed": "Bu testlerin başarılı olması gerekiyor"
+    }
+  },
+  "common": {
+    "about": "Hakkımızda",
+    "actions": "Eylemler",
+    "addMarkdownText": "Metin eklemek için markdown ekleyin. \n Buradan gerekli linke gidebilirsiniz: <a href=\"https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet\" target=\"_blank\"></a>.",
+    "administration": "Administration",
+    "amount": "Miktar",
+    "back": "Geri",
+    "cancel": "İptal",
+    "cheatSheetYouFind": "Bulabileceğiniz kısayol linki",
+    "close": "Kapat",
+    "continue": "Devam et",
+    "content": "İçerik",
+    "course": "Kurs",
+    "delete": "Sil",
+    "description": "Açıklama",
+    "discard": "Çöp",
+    "dismiss": "Reddet",
+    "documents": "Dökümanlar",
+    "download": "İndir",
+    "downloadBeta": "İndir (Beta)",
+    "duplicate": "Kopyala",
+    "edit": "Düzenle",
+    "editProfile": "Profili düzenle",
+    "exportProfile": "Profili dışa aktar",
+    "deleteProfile": "Profili sil",
+    "email": "E-Mail",
+    "export": "Dışa aktar",
+    "folder": "Dosya",
+    "fullscreenMode": "Fullscreen mod",
+    "SAULMS": "SAÜ LMS",
+    "general": "Genel",
+    "here": "Burada",
+    "legalnotice": "Yasal Uyarı",
+    "infobox": "Bilgi kutusu",
+    "login": "Giriş",
+    "name": "Ad",
+    "notifications": "Bildirimler",
+    "media": "Medya",
+    "members": "Üyeler",
+    "misc": "Diğer",
+    "ok": "Tamam",
+    "open": "Aç",
+    "openInTab": "Yeni sekme aç",
+    "password": "Şifre",
+    "privacy": "Gizlilik",
+    "profile": "Profil",
+    "profileDetails": {
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "uid": "Öğrenci numarası",
+      "uploadPicture": "Resim yükle"
+    },
+    "question": "Soru",
+    "register": "Kayıt Ol",
+    "reset": "Sıfırla",
+    "rename": "Adını değiştir",
+    "role": "Rol",
+    "roles": {
+      "student": "Öğrenci",
+      "teacher": "Öğretmen"
+    },
+    "save": "Kaydet",
+    "send": "Gönder",
+    "settings": "Ayarlar",
+    "statistics": "İstatikler",
+    "submit": "Gönder",
+    "submitted": "Gönderilen",
+    "teachers": "Öğretmenler",
+    "theme": "Tema",
+    "tooltip": {
+      "quitFullscreenMode": "Fullscreen moddan çık",
+      "downloadUnit": "İçeriği indir",
+      "clickToOpen": "Aç/Kapat"
+    },
+    "upload": "Yükle",
+    "users": "Kullanıcılar",
+    "validate": "Onaylama",
+    "validation": {
+      "instituteMail": "Lütfen okul e-postanızla kaydolun.",
+      "invalid": "Giriş geçersiz.",
+      "maxLength": "Ez az {{max}} karakter geçerlidir.",
+      "minLength": "Ez az {{min}} karakter geçerlidir.",
+      "password": "Şifre, en az bir özel karakter ve en az bir rakam içeren minimum 8 karakterden oluşmalıdır.",
+      "wrong_mimeType": "Geçersiz dosya tipi. Yalnızca resim türlerine izin verilir.",
+      "passwordsMatch": "Şifreler uyuşmuyor.",
+      "required": "Giriş yapmanız gereklidir."
+    },
+    "videos": "Videolar",
+    "line": "Sıra",
+    "errors": "Hatalar",
+    "collapseAll": "Tümünü daralt",
+    "expandAll": "Tümünü genişlet",
+    "status": "Durum"
+  },
+  "course": {
+    "delete": "Kursu sil",
+    "uploadImage": "Kurs resmi yükle",
+    "search": "Kur ara",
+    "placeholder": {
+      "accessKey": "Erişim anahtarı",
+      "description": "Kurs açıklaması",
+      "name": "Kurs ismi",
+      "searchAndAdd": "Kullanıcı adı, kimliği veya e-posta ile ara ve ekle",
+      "freeTextTheme": "Serbest metin teması"
+    },
+    "hasBeenDeleted": "silindi.",
+    "ShowCourse": "Kursları incele",
+    "text": {
+      "addMarkdownToCourse": "Bu kursa metin eklemek için markdown ekle.",
+      "canNotSeenByStudents": "Kurs öğrenciler tarafından görülemez.",
+      "canSeenByStudents": "Kurs öğrenciler tarafından görülebilir.",
+      "downloadHelpText": "Bir zip içinde indirmek istediğiniz birimleri veya dosyaları seçin.",
+      "downloadNoFiles": "Bu kursta indirilecek dosyalar bulunmuyor.",
+      "downloadBetaWarning": "İndirme özelliği hala geliştiriliyor. Çoğu ders için indirme özelliğinin oldukça iyi sonuç verdiğini varsayıyoruz. Bir hata bulursanız, lütfen bildirin geri dönelim.",
+      "IndividualPDF": "Bireysel PDF",
+      "IndividualPDFExplanation": "Birim başına pdf",
+      "SinglePDF": "Tekli PDF",
+      "SinglePDFExplanation": "Seçtiğiniz herşeyi içeren PDF",
+      "editCourse": "Kursu Düzenle",
+      "enterAccessKey": "Lütfen kursun erişim anahtarını girin.",
+      "enterAccessKeyForStudents": "Öğrenciler için bir erişim anahtarı girin.",
+      "goToCourse": "Kursa git",
+      "inCourse": "Kursta",
+      "infoWhitelist": "Bu listedeki tüm kullanıcıların bu kursa katılmasına izin verilir.",
+      "isFreeForEveryone": "Kurs herkes için ücretsiz ve erişilebilir.",
+      "needAccessKey": "Bu kurs bir erişim anahtarı gerektiriyor.",
+      "noCourses": "Henüz bir kurs eklenmedi.",
+      "notInCourse": "Kursta değil",
+      "notVisibleToStudents": "Kurs öğrencilere görünmez",
+      "overview": "Genel bakış",
+      "reportFor": "Sonuç için",
+      "selectAccessType": "Lütfen kurs türünü seçin.",
+      "selectAccessTypes": {
+        "free": "Bedava",
+        "accesskey": "Erişim Anaharı",
+        "whitelist": "Beyaz liste"
+      },
+      "selectFreeTextTheme": {
+        "": "Varsayılan",
+        "theme1": "Tema 1",
+        "theme2": "Tema 2",
+        "theme3": "Tema 3",
+        "theme4": "Tema 4"
+      },
+      "uploadWhitelist": "OBS-csv dosyanızı beyaz liste öğrencileri için kurs üyelerinize yükleyin. Eski beyaz liste kullanıcıları yeni bir dosya yükleyerek silindi.",
+      "userResults": "Kullanıcı sonuçları",
+      "yourCourseProgress": "Kursunuzun ilerleyişi",
+      "whitelist": "beyaz liste",
+      "noVideosAttached": "Bu kursa henüz video eklenmemiş.",
+      "noFilesAttached": "Bu kursa henüz dosya eklenmemiş.",
+      "removeUnwantedUsers": "İstenmeyen kullanıcıları kaldır.",
+      "createWhitelist": "Beyaz liste oluştur",
+      "openWhitelistDialog": "Beyaz liste iletişim kutusunu aç",
+      "whitelistCreated": "Beyaz liste oluşturuldu. Kursu kaydetmeyi unutmayın",
+      "whitelistNotReadable": "Beyaz liste dosyası okunamadı. Doğru dosyayı seçtiniz mi?",
+      "whitelistNoStudents": "Getirilecek hiçbir öğrenci bulunamadı."
+    },
+    "tooltip": {
+      "add": "Kurs ekle",
+      "addUserToWhitelist": "Beyaz listeye kullanıcı ekle.",
+      "download": "Kursu indir",
+      "enroll": "Kayıt",
+      "keyRequired": "Erişim Anahtarı gerekli",
+      "leave": "Ayrıl",
+      "noKeyRequired": "Ücretsiz erişim"
+    }
+  },
+  "cookie": {
+    "text": {
+      "moreInformation": "Daha fazla bilgi",
+      "cookieHint": "SAÜ LMS, size mümkün olan en iyi hizmeti vermek için çerezleri kullanır. Sitede gezinmeye devam ederseniz, çerezlerin açıklandığı şekilde kullanılmasını kabul edersiniz."
+    }
+  },
+  "dashboard": {
+    "addCourse": "Kurs Ekle",
+    "availableCourses": "Mevcut Kurslar",
+    "courses": "Kurslar",
+    "createCourse": "Kurs oluştur",
+    "createdCourses": "Oluşturulan Kurslar",
+    "importCourse": "Kursu içe aktar",
+    "inactiveCourses": "Aktif olmayan kurslar",
+    "myCourses": "Kurslarım",
+    "teacherCourses": "Öğretmen kurslarım"
+  },
+  "errorPage": {
+    "text": {
+      "pageNotFound": "Sayfa Bulunamadı :(",
+      "pageNotFoundHint": "Aradığınız sayfa kaldırılmış olabilir."
+    }
+  },
+  "file": {
+    "placeholder": {
+      "uploadFiles": "Yüklenilen dosyalar"
+    },
+    "text": {
+      "actions": "Eylemler",
+      "addFile": "Dosya ekle",
+      "filename": "Dosya adı",
+      "filesize": "Dosya boyutu",
+      "filesSelected": "Dosya seçildi",
+      "fileRemove": "Dosyayı sil",
+      "infoDropAddFiles": "Dosyaları buraya sürükleyin veya yüklemek için buraya tıklayın.",
+      "noVideo": "Video yok",
+      "noFiles": "Dosya yok",
+      "progress": "İlerleme",
+      "removeFromQueue": "Kuyruktan dosyayı silin",
+      "selectAll": "Hepsini seç",
+      "takePicture": "Fotoğraf Çek",
+      "files": "Dosyalar"
+    },
+    "tooltip": {
+      "selectFile": "Dosya seç",
+      "uploadFile": "Dosya yükle"
+    }
+  },
+  "home": {
+    "welcomeTo": "Hoşgeldiniz",
+    "backendError": "Backend tarafıyla bağlantı kurulamadı: {{err}}"
+  },
+  "lecture": {
+    "noUnits": "Hiçbir ünite oluşturulamadı",
+    "text": {
+      "add": "Ünite ekle",
+      "import": "Üniteyi içe aktar",
+      "noLecture": "Henüz ünite eklenmedi."
+    },
+    "tooltip": {
+      "add": "Ünite ekle",
+      "delete": "Üniteyi sil",
+      "download": "Üniteyi indir",
+      "duplicate": "Üniteyi kopyala",
+      "edit": "Üniteyi düzenle"
+    },
+    "action": {
+      "Add": "Ekle",
+      "Update": "Güncelle"
+    }
+  },
+  "mail": {
+    "send": "E-posta yolla",
+    "tooltip": {
+      "sendToMembers": "Seçili üyelere e-posta gönder"
+    }
+  },
+  "mainMenu": {
+    "about": "Hakkımızda",
+    "admin": "Admin",
+    "legalnotice": "Yasal Uyarı",
+    "logout": "Çıkış Yap",
+    "privacy": "Gizlilik Politikası",
+    "userSettings": "Ayarlar"
+  },
+  "messaging": {
+    "inputHintText": "Mesaj Yaz",
+    "sendIconTooltip": "Gönder",
+    "emojiIconTooltip": "Emoji Seçici Göster/Gizle"
+  },
+  "notifications": {
+    "text": {
+      "clearAll": "Tümünü Sil",
+      "noNotifications": "Hiçbir bildiriminiz yok"
+    }
+  },
+  "report": {
+    "exportToCsv": "CSV olarak dışa aktar",
+    "noProgressableUnits": "Bu kurs, iletilebilir üniteler içermiyor.",
+    "noStudents": "Bu kursa kayıtlı öğrenci yok.",
+    "noSubmissions": "Bu kullanıcı için gönderim yok",
+    "notProgressable": "Bu kurs, iletilebilir dosyalar içermiyor"
+  },
+  "snackbarMessages": {
+    "chooseJson": "İçe aktarmak için bir kurs.json dosyası seçin.",
+    "importSuccess": "Kurs başarıyla alındı!",
+    "AreYouSure": "İstediğinizden emin misiniz?",
+    "dismiss": "Çıkart"
+  },
+  "sort": {
+    "alphabetically": "Alfabetik",
+    "lastVisited": "Son ziyaret",
+    "placeholder": {
+      "sortedBy": "Sıralama"
+    }
+  },
+  "unit": {
+    "addCodeKata": "Kod Katası ekle",
+    "addContent": "İçerik ekle",
+    "addFiles": "Dosya ekle",
+    "addFilesToUnit": "Birime seçili dosyaları ekle ",
+    "addFreeText": "Boş metin ekle",
+    "addTasks": "Görev ekle",
+    "addVideos": "Video Ekle",
+    "viewAs": "Farklı göster",
+    "video": "Video",
+    "file": "Dosya",
+    "cantSwitchToVideo": "Video görüntülenmeyi yalnızca videolar içerebilir.",
+    "import": "Birim ekle",
+    "placeholder": {
+      "enterAnswer": "Cevabı buraya girin*",
+      "enterQuestion": "Soruyu buraya girin*",
+      "optionalDeadline": "İsteğe bağlı son tarih"
+    },
+    "text": {
+      "addAnswer": "Cevap ekle",
+      "addQuestion": "Soru ekle",
+      "canBeSeenByStudents": "Ünite öğrenciler tarafından görülebilir.",
+      "canNotBeSeenByStudents": "Ünite öğrenciler tarafından görülemez.",
+      "changedOn": "Değiştirildi",
+      "fullscreen": "Tam ekran",
+      "hintAddQuestionAndAnswers": "İstediğiniz sayıda yanıtla soru ekleyin. Doğru yanıtları onay kutusuyla işaretleyin.",
+      "publishedOn": "Yayınlandı.",
+      "submitAnswers": "Cevapları gönder",
+      "taskCompleted": "Görev tamamlandı",
+      "tasks": "Görevler",
+      "deadline": "Son tarih"
+    },
+    "tooltip": {
+      "add": "Üniteyi ekle",
+      "delete": "Üniteyi Sil",
+      "deleteAnswer": "Cevanı Sil",
+      "deleteQuestion": "Soruyu Sil",
+      "deleteTask": "Görevi Sil",
+      "download": "Üniteyi indir",
+      "downloadUnits": "Üniteleri indir",
+      "duplicate": "Üniteyi kopyala",
+      "edit": "Üniteyi düzenle"
+    },
+    "assignment": {
+      "performanceReasons": "Daha iyi bir performans için öğrenci başına yalnızca 4-5 dosya istemeniz gerekir.",
+      "add": "Ödev Ekle",
+      "submit": "Ödev gönder",
+      "delete": "Ödev sil",
+      "notSubmitted": "Gönderilmedi",
+      "downloadAll": "Tümünü indir",
+      "notRated": "Henüz puanlanmadı",
+      "failed": "Başarısız.",
+      "accepted": "Geçildi",
+      "numberOfFiles": "{{filesCount}} Dosya(lar)",
+      "errorDownload": "Bir şeyler ters gitti. Lütfen birkaç dakika sonra tekrar deneyin."
+    }
+  },
+  "user": {
+    "deleteUser": "Kullanıcıyı Sil",
+    "editUser": "Kullanıcıyı Düzenle",
+    "text": {
+      "notSignedIn": "Oturum Açılmadı",
+      "signedIn": "Oturum Açıldı"
+    },
+    "tooltip": {
+      "deleteUsers": "Seçilen Üyeleri sil",
+      "toggleMembers": "Tüm üyeleri değiştir.",
+      "doesNotExist": "Kullanıcı mevcut değil."
+    }
+  }
+}

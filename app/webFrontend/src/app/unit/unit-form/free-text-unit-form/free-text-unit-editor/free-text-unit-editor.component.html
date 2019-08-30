@@ -1,0 +1,19 @@
+<mat-tab-group (selectedTabChange)="onTabChange($event)" [formGroup]="unitForm">
+  <mat-tab label="Write">
+    <p class="info-text">
+      <mat-icon>info</mat-icon>
+      {{ 'course.text.addMarkdownToCourse' | translate }}
+      {{ 'common.cheatSheetYouFind' | translate }}
+      <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">{{ 'common.here' | translate }}</a>.
+    </p>
+
+    <ace-editor formControlName="markdown" #editor
+                [mode]="'markdown'"
+                [theme]="'github'"
+                [autoUpdateContent]="true">
+    </ace-editor>
+  </mat-tab>
+  <mat-tab label="Preview">
+    <app-free-text-unit-core [theme]="unitFormService.course.freeTextStyle"  [markdown]="unitForm.controls.markdown.value"></app-free-text-unit-core>
+  </mat-tab>
+</mat-tab-group>

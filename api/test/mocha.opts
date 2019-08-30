@@ -1,0 +1,6 @@
+build/test/**/*.js
+--recursive
+--reporter spec
+--require test/mocha.env.js
+--timeout 10000
+--exit

@@ -1,0 +1,49 @@
+@import '../../../variables';
+
+.profile {
+  .user-icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    border-radius: 1.25rem;
+    vertical-align: middle;
+  }
+
+  .name-section {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 1rem;
+
+    .name {
+      display: inline-block;
+
+      @media screen and (max-width: 1275px) {
+        overflow: hidden;
+        max-width: 60rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media screen and (max-width: 1070px) {
+          max-width: 40rem;
+
+          @media screen and (max-width: 750px) {
+            max-width: 15rem;
+
+            @media screen and (max-width: 350px) {
+              max-width: 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .user-data {
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+}

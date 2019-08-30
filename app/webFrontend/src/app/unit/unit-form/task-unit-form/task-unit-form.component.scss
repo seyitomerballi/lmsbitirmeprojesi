@@ -1,0 +1,60 @@
+@import '../../../../variables';
+
+.question-answer {
+  border-top: 1px dashed map-get($mat-grey, 300);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  clear: both;
+
+  .question {
+    width: 100%;
+
+    @include bp(md) {
+      width: 60%;
+    }
+  }
+
+  .remove {
+    color: map-get($mat-grey, 600);
+  }
+
+  .answers {
+    padding: 1rem;
+    background-color: map-get($mat-grey, 100);
+  }
+
+  .answer {
+    width: 100%;
+    display: inline-block;
+
+    .check-answer {
+      width: 100%;
+      display: flex;
+
+      .mat-checkbox {
+        margin: 1rem;
+      }
+      .mat-form-field {
+        flex-grow: 1;
+      }
+      .remove {
+        min-width: 0;
+        height: 36px; // height of mat button
+        margin-top: 0.75rem;
+        margin-left: 0.3rem;
+      }
+    }
+
+    @include bp(md) {
+      width: 50%;
+    }
+
+    @include bp(xl) {
+      width: 33.33%;
+    }
+  }
+
+  .add-answer {
+    padding-top: 0.66rem;
+  }
+}

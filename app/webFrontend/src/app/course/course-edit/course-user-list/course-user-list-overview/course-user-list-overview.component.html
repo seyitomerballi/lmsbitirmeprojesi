@@ -1,0 +1,45 @@
+<div class="members" *ngIf="show">
+
+  <div>
+    <button class="text-fit" mat-raised-button [matTooltip]="'user.tooltip.toggleMembers' | translate"
+            (click)="toggleAllUsers()">
+      <mat-icon>select_all</mat-icon>
+    </button>
+    <button [disabled]="selectedMembers.length <= 1"
+            class="text-fit" mat-raised-button [matTooltip]="'mail.tooltip.sendToMembers' | translate"
+            (click)="openWriteMailDialog()">
+      <mat-icon>email</mat-icon>
+    </button>
+    <button [disabled]="selectedMembers.length <= 1"
+            class="text-fit" mat-raised-button color="warn" [matTooltip]="'user.tooltip.deleteUsers' | translate"
+            (click)="removeSelectedUsers()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <ng-container *ngFor="let user of usersInCourse">
+    <mat-card [ngClass]="isInSelectedMembers(user) ? 'card_active' : 'card'"
+              (click)="toggleMember(user)">
+
+      <div class="icon-wrapper">
+        <div class="user-image" user-image [user-image]="user"></div>
+      </div>
+
+      <ul class="info" ng-class="{opacity: isInSelectedMembers(user)}">
+        <li><strong>{{user.profile.firstName}}</strong></li>
+        <li><strong>{{user.profile.lastName}}</strong></li>
+        <li class="userId">{{user.uid}}</li>
+      </ul>
+
+      <div class="opacity" *ngIf="isInSelectedMembers(user)"></div>
+
+      <div class="card-btn-wrapper" *ngIf="isInSelectedMembers(user)">
+        <button mat-raised-button (click)="openUserProfileDialog(user)" >DETAILS</button>
+        <button mat-raised-button (click)="openWriteMailDialog()" *ngIf="selectedMembers.length <= 1">{{ 'mail.send' | translate}}</button>
+        <button mat-raised-button color="warn" (click)="removeSelectedUsers()" *ngIf="selectedMembers.length <= 1">
+          {{ 'common.delete' | translate }}
+        </button>
+      </div>
+    </mat-card>
+  </ng-container>
+</div>
